@@ -9,5 +9,9 @@ app = Flask(__name__)           # creates the instance of the class
 def home():
     return render_template('home.html')
 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)             # debug = true to print out possible python errors
