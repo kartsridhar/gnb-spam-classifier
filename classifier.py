@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 # To make splitting of train/test data easier
 from sklearn.model_selection import train_test_split
-from Flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -48,3 +48,6 @@ def classify():
         text_transform = vectorizer.transform(text)
         prediction = classifier.predict(text_transform.toarray())
     return render_template('result.html', prediction=prediction)
+
+if __name__ == '__main__':
+    app.run(debug=True)
