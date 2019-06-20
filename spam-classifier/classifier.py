@@ -5,23 +5,33 @@ import random
 from sklearn.feature_extraction.text import CountVectorizer
 # To do the heavy lifting on Naive Bayes
 from sklearn.naive_bayes import MultinomialNB
-
+# To make splitting of train/test data easier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
+
+# Function to calculate the accuracy
+def calc_accuracy(gt_labels, pred_labels):
+    same = 0
+    for i in range(len(gt_labels)):
+        if gt_labels[i] == pred_labels[i]:
+            same += 1
+    accuracy = (same/len(gt_labels)) * 100
+    return accuracy
 
 df = pd.read_csv('data/training-data.csv', encoding="latin-1")
 
-X = df['message'].values
-y = df['class'].values
+messages = df['message'].values
+classes = df['class'].values
 
 vectorizer = CountVectorizer()
-X = vectorizer.fit_transform(X)
+messages = vectorizer.fit_transform(messages)
 
-train_set, test_set, train_classes, test_classes = train_test_split(X, y, test_size=0.3, random_state=42)
+# random.shuffle(messages)
+train_set, test_set, train_classes, test_classes = train_test_split(messages, classes, test_size=0.3, random_state=42)
 
 classifier = MultinomialNB()
 classifier.fit(train_set, train_classes)
 classifier.score(test_set, test_classes)
 
-prediction = classifier.predict(test_set)
-print(classification_report(test_classes, prediction))
+predictions = classifier.predict(test_set)
+accuracy = calc_accuracy(test_classes, predictions)
+print(accuracy)
