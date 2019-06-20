@@ -11,5 +11,21 @@
         <h3 class="animated slideInLeft">Spam Classifier using Naive Bayes</h3>
       </center>
     </header>
+    <div class="result">
+      {% if prediction == 'spam' %}
+      <center>
+        <h1>ALERT! ITS SPAM!</h1>
+      </center>
+      {% elif prediction == 'ham' %}
+      <center>
+        <h1>SAFE! ITS NOT SPAM!</h1>
+      </center>
+      {% endif %}
+    </div>
+    <footer>
+      <center>
+        <p>Made by <a href="https://kartsridhar.github.io">Karthik Sridhar</a></p>
+      </center>
+    </footer>
   </body>
 </html>
