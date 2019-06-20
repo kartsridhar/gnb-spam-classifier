@@ -2,23 +2,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../animate.css">
+    <link rel="stylesheet" href="../static/animate.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <header>
       <center>
-        <h3 class="animated slideInLeft">Spam Classifier using Naive Bayes</h3>
+        <h3>Spam Classifier using Naive Bayes</h3>
       </center>
     </header>
     <div class="result">
       {% if prediction == 'spam' %}
       <center>
-        <h1>ALERT! ITS SPAM!</h1>
+        <h1 id="spam" class="animated zoomIn">ALERT! ITS SPAM!</h1>
       </center>
       {% elif prediction == 'ham' %}
       <center>
-        <h1>SAFE! ITS NOT SPAM!</h1>
+        <h1 id="ham" class="animated zoomIn">SAFE! ITS NOT SPAM!</h1>
       </center>
       {% endif %}
     </div>

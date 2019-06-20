@@ -1,0 +1,30 @@
+body {
+  background-color: #18273f;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  background-color: #18273f;
+  padding: 5px 15px;
+  text-align: center;
+  margin: 50px 0 0;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#spam {
+  color: red;
+}
+
+#ham {
+  color: green;
+}
