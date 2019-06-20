@@ -7,3 +7,12 @@ The dataset used for the classifier can be downloaded [here](https://www.kaggle.
 The program is written in Python and _turned_ into a Web Application using __Flask__. You can find more information about how Flask works over [here](https://pythonhow.com/how-a-flask-app-works/).
 
 The foundation, idea and knowledge of this program is from [this](https://www.udemy.com/data-science-and-machine-learning-with-python-hands-on/) __Udemy__ course.
+
+## To run the program
+
+Since I haven't deployed the application on cloud hosting yet, you will have to clone the repository to test the classifier.
+
+1. Run ```python classifier.py``` on the terminal.
+2. Open your browser and go to ```localhost:5000```.
+
+
