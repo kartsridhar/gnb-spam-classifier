@@ -48,6 +48,6 @@ def classify():
         text_transform = vectorizer.transform(text)
         prediction = classifier.predict(text_transform.toarray())
     return render_template('result.html', prediction=prediction)
-# 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run()
