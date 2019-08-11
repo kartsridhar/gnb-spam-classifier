@@ -4,15 +4,19 @@ An experiment to build a Spam Classifier using sklearn's [Multinomial Naive Baye
 
 The dataset used for the classifier can be downloaded [here](https://www.kaggle.com/uciml/sms-spam-collection-dataset).
 
-The program is written in Python and _turned_ into a Web Application using __Flask__. You can find more information about how Flask works over [here](https://pythonhow.com/how-a-flask-app-works/).
+The program is written in Python using __Flask__.
 
 The foundation, idea and knowledge of this program is from [this](https://www.udemy.com/data-science-and-machine-learning-with-python-hands-on/) __Udemy__ course.
 
 ## To run the program
 
-Since I haven't deployed the application on cloud hosting yet, you will have to clone the repository to test the classifier.
+Check this [webapp](https://powerful-plateau-53291.herokuapp.com) to play around with the classifier
 
-1. Run ```python classifier.py``` on the terminal.
+OR
+
+Clone the repository to test the classifier.
+
+1. Run ```python app.py``` on the terminal.
 2. Open your browser and go to ```localhost:5000```.
 
 
