@@ -10,7 +10,7 @@ The foundation, idea and knowledge of this program is from [this](https://www.ud
 
 ## To run the program
 
-Check this [webapp](https://powerful-plateau-53291.herokuapp.com) to play around with the classifier
+Check this [webapp](https://spamm-classify.herokuapp.com/) to play around with the classifier
 
 OR
 
